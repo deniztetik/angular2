@@ -7,7 +7,6 @@ import { HeroService } from './hero.service';
     selector: 'my-heroes',
     providers: [HeroService],
     template: `
-    <h1>{{title}}</h1>
     <h2>My Heroes</h2>
     <ul class="heroes">
       <li *ngFor="let hero of heroes"
@@ -16,7 +15,6 @@ import { HeroService } from './hero.service';
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
     `,
     styles: [`
       .selected {
